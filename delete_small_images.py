@@ -39,6 +39,9 @@ min_height = unicode(sys.argv[3] if len(sys.argv) > 3 else raw_input('Max height
 while min_height.isnumeric() is not True:
     min_height = unicode(raw_input('Min height (must be a valid number): '))
 
+min_width = int(min_width)
+min_height = int(min_height)
+
 images = [f for f in os.listdir(images_dir) if re.match(r'(.)+.*\.[jpg|png]', f)]
 count = 1
 deleted_images = []
